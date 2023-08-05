@@ -1,1 +1,46 @@
 \section{Numeros complejos}
+\[ i^{2n} = (-1)^n, \quad i^{2n+1} = (-1)^n i \]
+
+\subsection{Propiedades}
+\begin{itemize}
+\item Sea $z = a_z + i b_z$, se cumple que:
+\[z^{-1} = \frac{a_z}{a_z^2 + b_z^2} - i\frac{b_z}{a_z^2 + b_z^2}\]
+\item \( \mathbb{C} \) es un cuerpo no ordenado.
+\item El \textbf{conjugado} de \(z = a + bi\) es \(\overline{z} = a - bi\)
+\end{itemize}
+\subsection{Forma polar}
+\(z = a + ib = \left(\underbrace{\sqrt{a^2+ b^2}}_{\rho}, \underbrace{arg(z)}_{\theta}\right) = (\rho, \theta)\) donde \(|arg(z)| = \arctg(b/a)\)
+\subsubsection{Forma Polar Trigonométrica}
+\[z = \rho \cos(\theta) + i \rho \sin(\theta)\]
+\subsubsection{Forma Polar Exponencial}
+\[z = \rho \; e^{i\theta}\]
+\subsubsection{Propiedades}
+\begin{itemize}
+    \item \(\arg(z \; w) = \arg(z) + \arg(w)\)
+    \item \(\arg(\frac{z}{w}) = \arg(z) - \arg(w)\)
+    \item \(\arg(z^n) = n \; \arg(z)\)
+    \item \(\arg(z^{-1}) = -\arg(z)\)
+    \item \(z^n = |z|^n \; e^{i \; n \; \arg(z)}\) con \(n \in \mathbb{N}\)
+    \item El \textbf{conjugado} de \(z = (\rho, \theta)\) es \(\overline{z} = (\rho, -\theta)\)
+\end{itemize}
+\subsubsection*{Propiedades del conjugado}
+\begin{itemize}
+    \item \(z = \overline{z} \iff Im(z) = 0\)
+    \item \(\overline{z+w} = \overline{z} + \overline{w}\)
+    \item \(\overline{z \; w} = \overline{z} \; \overline{w}\)
+    \item \(\overline{\left(\frac{z}{w} \right)} = \frac{\overline{z}}{\overline{w}}\)
+    \item \(z \; \overline{z} = |z|^2\)
+    \item \( z + \overline{z} = 2 Re(z) \)
+    \item \(z - \overline{z} = 2 \; i \; Im(z)\)
+    \item \(|z| = |\overline{z}|\)
+\end{itemize}
+\subsubsection*{Radicación}
+Sea \(w^n = z\) con \(n \in \mathbb{N}\), se deduce que:
+\[w_k = \sqrt[n]{\rho} \; e^{i \left(\frac{\theta + 2k \pi}{n}\right)}, \quad k \in \{0, \dots, n-1\}\]
+\subsubsection*{Logaritmación}
+Sea \(e^w = z\), las soluciones son:
+\[w_k = \ln|z| + i (\arg(z) + 2k\pi), \quad k \in \mathbb{Z}\]
+A veces se trabaja en el valor principal del logaritmo dado por:
+\[w_0 = \ln|z| + i \arg(z)\]
+\subsubsection*{Potencia compleja}
+\[z^w = e^{w \ln z}\]
