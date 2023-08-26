@@ -13,6 +13,8 @@ Sea un cuerpo \(K \in \{\R,\C\}\), un espacio vectorial es una cuaterna de la fo
         \item \(\lambda(u+v) = \lambda u + \lambda v\)
         \item \(\lambda(\beta v) = (\lambda \beta) v\)
         \item Sea \(1 \in K \; \text{el neutro multiplicativo} \implies 1.v = v\)
+
+        \item Sea \(0 \in K \; \text{el elemento nulo} \implies 0.v = \mathbf{0} \in V\)
     \end{itemize}
     
 \end{itemize}
@@ -25,4 +27,39 @@ Sea \(V\) espacio vectorial y \(S \subseteq V\). Decimos que \(S\) es un \textbf
 \subsubsection*{Combinación lineal}
 Sea \((V,\oplus,K,\otimes)\) un espacio vectorial, y sea \(A = \{v_1,\dots,v_n\} \subseteq V\). Decimos que \(v\in V\) es una \textbf{combinación lineal de A} si existen \(\alpha_1,\dots,\alpha_n \in K\) tales que:
 \[v = \alpha_1.v_1 + \dots + \alpha_n . v_n\] 
+\begin{itemize}
+    \item \(A\) es \textbf{linealmente dependiente (LD)} si:
+     \[\exists \alpha_i \neq 0 \talque \alpha_1.v_1 + \dots + \alpha_n . v_n = 0\]
+    \item \(A\) es \textbf{linealmente independiente (LI)} si:
+     \[\alpha_1.v_1 + \dots + \alpha_n v_n = 0 \iff \alpha_1 = \dots = \alpha_n = 0\] 
+\end{itemize}
+\subsubsection*{Subespacio generado}
+Se define como \textbf{subespacio generado por \(A\)} al conjunto de todas las combinaciones lineales de A.
+
+\[A = \left\{\sum_{i=1}^n \alpha_i . v_i \talque \alpha_i \in K\right\}\]
+
+Notación: \(\left<A\right>, gen(A)\)
+\subsubsection*{Base y Dimensión}
+Sea \((V,\oplus,K,\otimes)\) un espacio vectorial y \(B = \left\{v_1,\dots,v_n\right\} \subseteq V\). Decimos que \(B\) es una \textbf{base de \(V\)} si:
+\begin{enumerate}
+    \item Es \textbf{linealmente independiente (LI)}.
+    \item Genera \(V\), es decir: \(gen(B) = V\) 
+\end{enumerate} 
+\textbf{Definición:} Se define como \textbf{dimensión de \(V\) un espacio vectorial} al cardinal de una base de \(V\). Notación: \(dim(V)\)
+
+\subsubsection*{Proposición}
+\[\text{Todo espacio vectorial tiene infinitas bases pero todas tienen el mismo cardinal.}\]
+\subsubsection*{Propiedades}
+Sean \(S,T \subseteq V\) subsespacios entonces:
+\begin{itemize}
+    \item \(S \subseteq T \implies dim(S) \leq dim(T)\)
+    \item \(S \subseteq T \; \wedge \; dim(S) = dim(T) \implies S = T\)
+\end{itemize}
+\subsubsection*{Coordenadas de un bector en una Base}
+Sea \((V,\oplus, K,\otimes)\) un espacio vectorial, \(B = \left\{v_1,\dots,v_n\right\}\) una base de \(V\). Sea \(v \in V\), sabemos que existen \(\alpha_1, \dots, \alpha_n\) tal que:
+\[v = \alpha_1.v_1 + \dots + \alpha_n.v_n\]
+
+A los escalares \(\alpha_1, \dots, \alpha_n\) se los llama \textbf{coordenadas de \(V\) en la base \(B\)} y se suele usar el vector \(\alpha = (\alpha_1, \dots, \alpha_n)\)
+
+Notación: \([v]_B = (\alpha_1,\dots,\alpha_n)\)
 
