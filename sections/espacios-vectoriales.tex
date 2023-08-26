@@ -1,1 +1,28 @@
 \section*{Espacios vectoriales}
+Sea un cuerpo \(K \in \{\R,\C\}\), un espacio vectorial es una cuaterna de la forma \(\left(V,\oplus,K,\otimes\right)\) donde:
+\begin{itemize}
+    \item \(\oplus : V \by V \to V\)
+    \begin{itemize}
+        \item \(u + (v + w) = (u+v) + w\)
+        \item Existe elemento neutro \(n \in V \; \big| \; n +v = v+n = v\)
+        \item Existe elemento opuesto \(-v \forall v \in V \; \big| \; v + (-v) = n\)
+    \end{itemize}
+    
+    \item \(\otimes: K \by V \to V\)
+    \begin{itemize}
+        \item \(\lambda(u+v) = \lambda u + \lambda v\)
+        \item \(\lambda(\beta v) = (\lambda \beta) v\)
+        \item Sea \(1 \in K \; \text{el neutro multiplicativo} \implies 1.v = v\)
+    \end{itemize}
+    
+\end{itemize}
+\subsection*{Subespacios}
+Sea \(V\) espacio vectorial y \(S \subseteq V\). Decimos que \(S\) es un \textbf{subespacio vectorial} si:
+\begin{enumerate}
+    \item \(\forall u,v \in S : (u+v) \in S\)
+    \item \(\forall v \in S, \lambda \in K: (\lambda . v) \in S\)
+\end{enumerate}
+\subsubsection*{Combinación lineal}
+Sea \((V,\oplus,K,\otimes)\) un espacio vectorial, y sea \(A = \{v_1,\dots,v_n\} \subseteq V\). Decimos que \(v\in V\) es una \textbf{combinación lineal de A} si existen \(\alpha_1,\dots,\alpha_n \in K\) tales que:
+\[v = \alpha_1.v_1 + \dots + \alpha_n . v_n\] 
+
