@@ -1,0 +1,108 @@
+
+\section*{Matrices}
+\[ A = 
+\begin{pmatrix}
+    a_{11} & a_{12} & \dots & a_{1n} \\
+    a_{21} & a_{22} & \dots & a_{2n} \\
+    \vdots & \vdots & \vdots & \vdots \\
+    a_{m1} & a_{m2} & \dots & a_{mn} \\
+\end{pmatrix}, \quad a_{ij} \in K = \{\R,\C\}
+\]
+\begin{itemize}
+    \item Notación: \(A = \left(a_{ij}\right)_{ij}\). Se interpreta como decir que el elemento dentro de los paréntesis \(a_{ij}\) se inserta en la posición \(ij\) de la matriz resultante.
+    \item Vector fila: \(F_k = \left(a_{k1},a_{k2}, \dots, a_{kn}\right)\)
+    \item Vector columna: \(C_k = \begin{pmatrix}
+        a_{k1}\\a_{k2}\\\vdots\\a_{kn}
+    \end{pmatrix}\)
+\end{itemize}
+\subsubsection*{Matriz transpuesta}
+\[A^T = (a_{ji})_{ij}\]
+Notación: \(A^T,A^t,A^*,A'\)
+\[
+    A = \begin{pmatrix}
+        11 & -12 & 7 \\
+        8 & 4 & -2
+    \end{pmatrix} \implies A^T = \begin{pmatrix}
+        11 & 8 \\
+        -12 & 4\\
+        7 & -2
+    \end{pmatrix}\]
+\textbf{Propiedades:}
+\begin{itemize}
+    \item \((A^T)^T = A\)
+    \item \((A+B)^T = A^T + B^T\)
+    \item \((\lambda A)^T =  \lambda \; A^T\)
+    \item \((A \cdot B)^T = B^T \cdot A^T\)
+\end{itemize}
+ 
+\subsubsection*{Matriz Simétrica}
+Solo definido para matrices cuadradas. \(A \in \R^{n \times n}\) es simétrica \(\iff A= A^T \iff a_{ij} = a_{ji} \; \forall i,j \leq n\)
+
+\textbf{Observación:} Si \(A \in \R ^{m \times n}\), quedan definidas \(A \cdot A^T\) y \(A^T \cdot A\) que con \textbf{cuadradas} y \textbf{simétricas}.
+\subsubsection*{Matriz Antisimétrica}
+Definido sólo para matrices cuadradas. \(A \in \R^{n \times n}\)  es simétrica \(\iff a_{ij} = - a_{ji} \implies a_{kk} = 0\)
+\subsubsection*{Traza}
+\[Tr(A) = \sum_{i=1}^n a_{ii} = Suma \; diagonal\]
+\textbf{Propiedades:}
+\begin{itemize}
+    \item \(Tr(A+B) = Tr(A) + Tr(B)\)
+    \item  \(Tr(\lambda) = \lambda \; Tr(A)\)
+    \item En general: \(Tr(A \cdot B) \neq Tr(A).Tr(B)\)
+\end{itemize}
+\subsubsection*{Matrices especiales}
+Definido para matrices cuadradas únicamente:
+\begin{itemize}
+    \item Matriz triangular superior: \(\begin{pmatrix}
+        a_{11} & a_{12} & a_{13}\\
+        0 & a_{22} & a_{23} \\
+        0 & 0 & a_{33}
+    \end{pmatrix}\)
+    \item Matriz triangular inferior: \(\begin{pmatrix}
+        a_{11} & 0 & 0 \\
+        a_{21} & a_{22} & 0 \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix}\)
+    \item Matriz diagonal: \(\begin{pmatrix}
+        a_{11} & 0 & 0 \\
+        0 & a_{22} & 0 \\
+        0 & 0 & a_{33}
+    \end{pmatrix}\)
+    \item Matriz escalar: es una matriz diagonal con todos los valores iguales.
+\(\begin{pmatrix}
+        a & 0 & 0 \\
+        0 & a & 0 \\
+        0 & 0 & a
+    \end{pmatrix}\)
+    \item Matriz identidad (\(I_n \in \R^{n \times n}\)):
+    \(\begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{pmatrix}\)
+\end{itemize}
+\textbf{Propiedad:} Para toda \(A \in \R^{n \times n}, \quad A \cdot I_n = I_n \cdot A = A\)
+\subsubsection*{Matriz Inversa}
+Sea \(A \in K^{n \times n}\), si existe \(B \in K^{n \times n}\) tal que:
+\[A \cdot B = B \cdot A = I \implies A \; \text{es inversible}\]
+Notación: \(B = A^{-1}\). No siempre existe la inversa de una matriz.
+\textbf{Propiedades:}
+\begin{itemize}
+    \item Es única
+    \item \((A^{-1})^{-1} = A\)
+    \item \((k.A) = \frac{1}{k} A^{-1}\)
+    \item \((A \cdot B)^{-1} = B^{-1} \cdot A^{-1}\)
+\end{itemize}
+ 
+\subsubsection*{Definiciones}
+\begin{itemize}
+    \item Si existe \(A^{-1}\), se dice que \(A\) \textbf{es regular o inversible}.
+    \item Si no existe \(A^{-1}\) se dice que \(A\) es \textbf{singular o no inversible}. 
+    \item \(A\) es \textbf{ortogonal} \(\iff A^{-1} = A^T \iff A^T \cdot A = I\)  
+\end{itemize}
+
+
+
+
+
+ 
+

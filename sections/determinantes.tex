@@ -1,0 +1,76 @@
+\section*{Determinantes}
+Notación: \(d(A) = det(A)\)
+\textbf{Propiedades:} Sea \(A = \left(A_1, \dots, A_n\right) \in K^{n \times n}\):
+\begin{itemize}
+    \item \(d(I) = 1\)
+    \item Si existe \(j \; \big| A_j = A_{j+1} \implies d(A) = 0\)
+    \item Si \(A'_j = \alpha A_j \implies d(A_1, \dots,A'_j,\dots,A_n) = \alpha.d(A_1, \dots, A_n)\)
+    
+    Ejemplo:
+
+\[det \left(
+\begin{pmatrix}
+    a_{11} & \colorbox{blue!20}{$2.a_{12}$} & a_{13} \\
+    a_{21} & \colorbox{blue!20}{$2.a_{22}$} & a_{23} \\
+    a_{31} & \colorbox{blue!20}{$2.a_{32}$} & a_{33} \\
+\end{pmatrix} \right) = 2 . det\left(
+\begin{pmatrix}
+    a_{11} & \colorbox{blue!20}{$a_{12}$} & a_{13} \\
+    a_{21} & \colorbox{blue!20}{$a_{22}$} & a_{23} \\
+    a_{31} & \colorbox{blue!20}{$a_{32}$} & a_{33} \\
+\end{pmatrix} \right)
+\]
+\item Si \(A_j = B_j + C_j \implies det\left(A_1, \dots , A_n\right) = det\left(A_1,\dots,B_j,\dots,A_n\right) + det\left(A_1,\dots,C_j,\dots,A_n\right) \)
+Ejemplo:
+
+
+\[det \left(
+\begin{pmatrix}
+    a_{11} & \colorbox{blue!20}{$b_{12} + c_{12}$} & a_{13} \\
+    a_{21} & \colorbox{blue!20}{$b_{22} + c_{22}$} & a_{23} \\
+    a_{31} & \colorbox{blue!20}{$b_{32} + c_{32}$} & a_{33} \\
+\end{pmatrix} \right) =  det \left(
+\begin{pmatrix}
+    a_{11} & \colorbox{blue!20}{$b_{12}$} & a_{13} \\
+    a_{21} & \colorbox{blue!20}{$b_{22}$} & a_{23} \\
+    a_{31} & \colorbox{blue!20}{$b_{32}$} & a_{33} \\
+\end{pmatrix} \right) + det\left(
+\begin{pmatrix}
+    a_{11} & \colorbox{blue!20}{$c_{12}$} & a_{13} \\
+    a_{21} & \colorbox{blue!20}{$c_{22}$} & a_{23} \\
+    a_{31} & \colorbox{blue!20}{$c_{32}$} & a_{33} \\
+\end{pmatrix} \right)
+\]
+\end{itemize}
+\subsubsection*{Cálculo de determinantes}
+\[
+A = \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} \\
+\end{pmatrix}
+\]
+
+El determinante de \(A\) se calcula como:
+\[
+\det(A) = a_{11} a_{22} - a_{12} a_{21}
+\]
+
+Para el caso de una matriz \(B \in K^{3 \times 3}\):
+\[
+B = \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} \\
+\end{pmatrix}
+\]
+
+El cálculo de hace de la siguiente forma:
+
+\[
+\det(B) = a_{11} \cdot \det\begin{pmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{pmatrix} - a_{12} \cdot \det\begin{pmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{pmatrix} + a_{13} \cdot \det\begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}
+\]
+
+En general, el signo de cada factor es \((-1)^{i+j}\).
+\subsubsection*{Propiedad}
+\[A \; \text{es regular} \iff det(A) \neq 0\]
+
