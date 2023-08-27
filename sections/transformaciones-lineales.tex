@@ -1,0 +1,100 @@
+\section*{Transformaciones lineales}
+La idea es definir una función entre espacios vectoriales pero que perseven estructura.
+
+Sea $ V, W $ espacios vectoriales. Una transformación lineal es una función $ T:V \to W $ que cumple:
+\begin{enumerate}
+    \item $ T(v_1 + v_2) = Tv_1 + Tv_2 $
+    \item $ T(\lambda v) = \lambda . T(v) $
+\end{enumerate}
+
+\subsection*{Núcleo de una TL}
+Se define como \textbf{núcleo de una TL $ T:V \to W $} al conjunto:
+\begin{math}
+    N(T) = \left\{ v \in V \talque T(v) = 0_{W} \right\}
+\end{math}
+\textbf{Proposición:} $ N(T) $ es un subespacio vectorial.
+\subsection*{Imagen de una TL}
+Se define como \textbf{Imagen de T} a:
+\begin{math}
+    R(T) = \left\{ T(v) \talque v \in V \right\}
+\end{math}
+\subsection{Clasificación de las Transformaciones Lineales}
+\begin{itemize}
+    \item $ T:V \to W $ es inyectiva si dados $ v_1,v_2 \in V : T(v_1) =T(v_2) \implies v_1 = v_2 $
+
+    \textbf{Proposición:} $ T \; \text{es inyectiva} \iff N(T) = \left\{ 0 \right\}$ 
+\item $ T: V \to W $ es \textbf{sobreyectiva} si $ R(T) = W $
+
+    \textbf{Recordar:} $ S \subseteq T \andd dim(S) = dim(T) \implies S = T $
+
+\item $ T $ es \textbf{biyectiva (isomorfismo)} si es \underline{inyectiva y sobreyestiva}.
+
+\end{itemize}
+
+\subsection{Teorema de las dimensiones}
+Sea $ V $ espacio vectorial de dimensión finita y $ T : V \to W $ una TL con $ R(T) $ de dimensión finita:
+
+\[
+    dim(V) = dim(N(T)) + dim(R(T))
+\]
+
+\subsection{Teorema}
+Si $ T: V \to W $ y $ dim(V) = dim(W) $, entonces:
+\[
+    T \text{ es Monoformismo} \iff T \text{ es Epimorfismo} \iff T \text{ es Isomorfismo}
+\]
+
+\subsection{Teorema fundamental de las TL}
+Sea $ V,W $ dos espacios vectoriales. Sea $ B =\left\{ v_1, \dots, v_n \right\} $ una base de $ V $ y $ A = \left\{ w_1, \dots, w_n \right\} \subseteq W$. Entonces existe una única transformación lineal $ T:V \to W $ que cumple:
+\[
+    T(v_1) = w_1, \; \dots, \; T(v_n) = w_n
+\]
+\subsection{Matriz Asociada a una Transformación Lineal}
+Sea $ T :V \to W $ una TL, existe un $ \tilde{T}: \R^n \to \R^m $ con $ n = dim(V) $ y $ m = dim(W) $
+
+Consideremos $ B_V = \left\{ v_1,\dots,v_n \right\}, $$ B_W = \left\{ w_1, \dots, w_n \right\}$ bases de $ V $ y $ W $ respectivamente:
+
+\begin{itemize}
+    \item Dado $ v \in V $, existe:
+        \[
+            (\alpha_1, \dots, \alpha_n) \talque v = \alpha_1 v_1 + \dots + \alpha_n v_n
+    \]
+\item Dado $ w \in W $, existe:
+
+        \[ 
+            (\beta_1, \dots, \beta_n) \talque w = \beta_1 w_1 + \dots + \beta_n w_n
+    \]
+
+\item Además:
+    \[
+        T(v_i) = a_{i1}w_1 + \dots + a_{in}w_n
+    \]
+ 
+\end{itemize}
+
+Es decir:
+
+\[
+    \begin{pmatrix} \beta_1 \\ \vdots \\ \beta_m \end{pmatrix} =
+    \underbrace{\begin{pmatrix} a_{11} & \dots & a_{1n} \\
+            \vdots & \vdots & \vdots \\
+            a_{m1} & \dots & a_{mn}
+        \end{pmatrix}}_{A} \cdot \begin{pmatrix} 
+    \alpha_1 \\ \vdots \\ \alpha_m \end{pmatrix} \text{ que equivale a decir: } \left[T(v)\right]_{B_W} = A \cdot \left[v\right]_{B_V}\]
+
+
+A la matriz $ A $ se la llama \textbf{Matriz asociada a la Transformación en las bases $ B_V $ y $ B_W $}
+
+Notación: $ A = M(T)_{B_VB_W} $
+
+Informalmente:
+
+\[
+    \text{''Todas las TL entre espacios de dim. finita son de la forma $T(X) = A \cdot X$''}
+\]
+
+Sea $ T :V \to W $, con $ B_V = \left\{ v_1, \dots, v_n \right\}$ y  $ B_W = \left\{ w_1, \dots, w_n \right\}$ notar:
+
+\[
+    M(T)_{B_VB_W} = \begin{pmatrix} \left[T(v_1)\right]_{B_W} & \dots & \left[T(v_n)\right]_{B_W} \end{pmatrix}
+\]

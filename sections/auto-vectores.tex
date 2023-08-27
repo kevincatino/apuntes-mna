@@ -1,0 +1,47 @@
+\section*{Autovalores y Autovectores}
+\subsection{Diagonalización}    
+Una \textbf{matriz diagonal} (solo aplica a matrices cuaradas) tiene la siguiente forma:
+\[
+    D = \begin{pmatrix} a_{11} & 0 & 0\\
+                        0 & a_{22} & 0\\
+                        0 & 0 & a_{33}\end{pmatrix}
+\]
+\subsubsection{Ventajas de matrices diagonales}
+\begin{enumerate}
+    \item Sistemas de ecuaciones:
+        \[
+     \begin{pmatrix} a_{11} & 0 & 0\\
+                        0 & a_{22} & 0\\
+                        0 & 0 & a_{33}\end{pmatrix} \cdot \begin{pmatrix}  x \\ y \\ z \end{pmatrix} = 
+                        \begin{pmatrix}  b_1 \\ b_2 \\ b_3 \end{pmatrix} \implies b_1 = a_{11}x, \; b_2 = a_{22}y, \; b_3 = a_{33}z
+        \]
+    \item Cálculo Funcional:
+        \[
+            f: \R \to \R, \; D \text{ diagonal} \implies f(D) = \begin{pmatrix} a_{11} & 0 & 0\\
+                        0 & a_{22} & 0\\
+                        0 & 0 & a_{33}\end{pmatrix}
+        \]
+
+        Ejemplo:
+        \[
+            D^2  =     \begin{pmatrix} a_{11}^2 & 0 & 0\\
+                        0 & a_{22}^2 & 0\\
+                        0 & 0 & a_{33}^2\end{pmatrix}
+        \]
+
+\end{enumerate}
+
+\subsection{Matrices Semejantes}
+Sean $ A,B\ in K^{n \by n} $, se dice que \textbf{$A$ es semejante a $B$} si ocurre que:
+\[
+    \exists  P \in K^{n \by n}  \talque B = P^{-1} \cdot A \cdot P \iff A = P \cdot B \cdot P^{-1}.  
+\]
+A $ P $ se le llama \textbf{Matriz Cambio de Base}.
+\subsection{Autovalores y Autovectores}
+Sea $ A \in K^{n \by n} $. Se dice que $ X \in K^{n} - \left\{ 0 \right\} $ es \textbf{autovector de $A$}, si existe $ \lambda \in K $ tal que:
+\[
+    A \cdot X = \lambda \cdot X
+\]
+Al escalar $\lambda$ se lo llama \textbf{autovalor asociado al autovector $X$}.
+\[
+\text{A } \left<A \cdot X\right> = \left<X\right> \text{ se los llama \textbf{subespacios invariantes.}}\]
